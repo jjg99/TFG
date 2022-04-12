@@ -6,7 +6,7 @@ Acknowledgements to Maxwell Bland and Kirill Levchenko for the support in this p
 
 2021-2022
 
-## Dependencies and Tools
+## Tools and Resources
 
 In the development of the project, the following tools were used:
 
@@ -18,16 +18,14 @@ In the development of the project, the following tools were used:
   * [r2pipe](https://www.radare.org/n/r2pipe.html)
   * [r2ghidra](https://github.com/radareorg/r2ghidra)
 * [angr](https://angr.io)
+* [DaDRA](https://github.com/jaredmejia/dadra)
 * [ICSREF](https://github.com/momalab/ICSREF)
 
-### Installation
-
----
+## Installation
 
 A virtual environment such as [conda/minconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) or [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/install.html) (Linux/Mac OS X only) is recommended for the installation of the packages. Firthermore, the python version should be 3.8+.
 
-
-##### IPython
+#### IPython
 
 * Install the IPython package:
 
@@ -35,14 +33,14 @@ A virtual environment such as [conda/minconda](https://docs.conda.io/projects/co
   $ pip3 install ipython
   ```
 
-##### Ghidra
+#### Ghidra
 
 * Make sure that [Java Development Kit 11](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html) is installed and on the PATH
 * Access and download the latest [release](https://github.com/NationalSecurityAgency/ghidra/releases) of Ghidra
 * Extract the Ghidra release file
 * Launch Ghidra: **`./ghidraRun`** **(or** **`ghidraRun.bat`** for Windows)
 
-###### Ghidra Bridge
+##### Ghidra Bridge
 
 * Install the ghidra_bridge package:
   ```
@@ -53,40 +51,50 @@ A virtual environment such as [conda/minconda](https://docs.conda.io/projects/co
   $ python3 -m ghidra_bridge.install_server ~/ghidra_scripts
   ```
 
-##### Radare 2
+#### Radare 2
 
 * Install from git:
+
   ```
   $ git clone https://github.com/radareorg/radare2
   $ cd radare2
   $ sys/install.sh
   ```
 
-###### r2pipe
+  ##### r2pipe
 
-* Install the r2pipe package:
-  ```
-  $ pip3 install r2pipe
-  ````
 
-###### r2ghidra
+  * Install the r2pipe package:
+    ```
+    $ pip3 install r2pipe
+    ```
 
-* Install r2ghidra using the radare2 package manager:
-  ```
-  $ r2pm update
-  $ r2pm -ci r2ghidra
-  ```
+  ##### r2ghidra
 
-  Note: make sure that in the folder `~/.local/share/radare2/plugins` there is a sub-folder named `r2ghidra-sleigh`. If not, decompress the file named `r2ghidra_sleigh-x.x.x.zip` and change the resulting unzipped folder to `r2ghidra-sleigh`.
+  * Install r2ghidra using the radare2 package manager:
 
-##### angr
+    ```
+    $ r2pm update
+    $ r2pm -ci r2ghidra
+    ```
+
+    Note: make sure that in the folder `~/.local/share/radare2/plugins` there is a sub-folder named `r2ghidra-sleigh`. If not, decompress the file named `r2ghidra_sleigh-x.x.x.zip` and change the resulting unzipped folder to `r2ghidra-sleigh`.
+
+#### angr
 
 * Install the angr package:
   ```
   $ pip3 install angr
   ```
 
-##### ICSREF
+#### DaDRA
+
+* Install the DaDRA package:
+  ```
+  $ pip3 install --upgrade dadra
+  ```
+
+#### ICSREF
 
 While ICSREF is not vital for the execution of the project, it may be installed to demonstrate some of the findings and simulate attacks on PLC.
 
@@ -110,8 +118,9 @@ Note: ICSREF is built on python2 and as such, a virtual environment should be us
   $ echo -e "\n# ICSREF alias\nalias icsref='workon icsref && python `pwd`/icsref/icsref.py'\n" >> ~/.bash_aliases && source ~/.bashrc
   ```
 
+## Usage
 
-
+Currently, WiP (Work in Progress)
 
 ## Contact
 
